@@ -41,6 +41,8 @@ dependencies:
   go_router: ^6.2.0
   google_sign_in: ^6.2.1
   shared_preferences: ^2.0.18
+  smooth_page_indicator: ^1.1.0
+  svg_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_lints: ^3.0.0
@@ -59,8 +61,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/
+    - assets/translations/
     - assets/fonts/
+    - assets/images/flags/
+    - assets/images/on_boarding/
+    - assets/icons/logo/
+    - assets/icons/auth/
+    - assets/icons/bottom_nav_bar/
 
   fonts:
     - family: Poppins
