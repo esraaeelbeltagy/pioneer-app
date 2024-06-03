@@ -2,7 +2,7 @@ name: pioneer_app
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.2 <4.0.0'
+  sdk: ">=3.3.2 <4.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -38,13 +38,13 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.5
   flutter_screenutil: ^5.9.1
+  flutter_svg: ^2.0.10+1
   fluttertoast: ^8.2.1
   go_router: ^6.2.0
   google_sign_in: ^6.2.1
   scrollable_positioned_list: ^0.3.8
   shared_preferences: ^2.0.18
   smooth_page_indicator: ^1.1.0
-  svg_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -58,7 +58,7 @@ flutter_launcher_icons:
   ios: true
   remove_alpha_ios: true
   image_path: "assets/images/launcher_icon/launcher_icon.png"
-  min_sdk_android: 21    
+  min_sdk_android: 21
 
 flutter_native_splash:
   color: "#ffffff"
@@ -68,15 +68,14 @@ flutter_native_splash:
     image: assets/images/pioneer-logo.png
     icon_background_color: "#ffffff"
 
-  web: false 
+  web: false
   android: true
-  ios: true   
+  ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -86,6 +85,7 @@ flutter:
   assets:
     - assets/translations/
     - assets/fonts/
+    - assets/images/
     - assets/images/flags/
     - assets/images/on_boarding/
     - assets/icons/logo/

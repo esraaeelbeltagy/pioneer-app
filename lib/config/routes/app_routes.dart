@@ -1,4 +1,6 @@
 class Routes {
+  static const splash = '/splash';
+  static const welcome = '/welcome';
   static const onBoarding = '/on-boarding';
   static const chooseRole = '/choose-role';
   static const chooseLanguage = '/choose-language';
@@ -12,10 +14,7 @@ class Routes {
 
   static const signUpStudent = '/sign-up-student';
 
-
   //! for Parent
 
   static const signUpParent = '/sign-up-parent';
- 
-
 }
