@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pioneer_app/core/utils/app_strings.dart';
 
 import 'config/routes/router.dart';
 import 'config/theme/app_theme.dart';
@@ -18,7 +19,7 @@ class Pioneer extends StatelessWidget {
         return MaterialApp.router(
           theme: appTheme(),
           debugShowCheckedModeBanner: false,
-          title: 'Pioneer',
+          title: AppStrings.appTitle,
           routerConfig: router,
         );
       },
