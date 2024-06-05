@@ -7,8 +7,8 @@ import 'package:pioneer_app/core/utils/app_colors.dart';
 import 'package:pioneer_app/core/utils/app_strings.dart';
 import 'package:pioneer_app/core/widgets/buttons/custom_elevated_button.dart';
 
-class WelcomeButtonsSection extends StatelessWidget {
-  const WelcomeButtonsSection({
+class ChooseRoleButtonsSection extends StatelessWidget {
+  const ChooseRoleButtonsSection({
     super.key,
   });
 
@@ -18,27 +18,27 @@ class WelcomeButtonsSection extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         CustomElevatedButton(
-          text: AppStrings.login.toUpperCase(),
-          onPressed: () => _goToLogin(context),
+          text: AppStrings.parent,
+          onPressed: () => _goToParent(context),
           backgroundColor: context.theme.primaryColor,
           foregroundColor: AppColors.white,
         ),
         SizedBox(height: 10.h),
         CustomElevatedButton(
-          text: AppStrings.signup,
-          onPressed: () => _goToChooseRole(context),
-          backgroundColor: Colors.grey,
+          text: AppStrings.student,
+          onPressed: () => _goToStudent(context),
+          backgroundColor: AppColors.secondaryColor,
           foregroundColor: AppColors.white,
         ),
       ],
     );
   }
 
-  void _goToLogin(BuildContext context) {
-    context.pushReplacementNamed(Routes.signIn);
+  void _goToParent(BuildContext context) {
+    context.pushReplacementNamed(Routes.signUpParent);
   }
 
-  void _goToChooseRole(BuildContext context) {
-    context.pushReplacementNamed(Routes.chooseRole);
+  void _goToStudent(BuildContext context) {
+    context.pushReplacementNamed(Routes.chooseStudent);
   }
 }

@@ -19,19 +19,16 @@ class WelcomeScreenLandscape extends StatelessWidget {
             const Expanded(
               child: WelcomeLogoSection(),
             ),
-            SizedBox(width: 20.w),
             Expanded(
-              child: SingleChildScrollView(
-                padding: EdgeInsets.all(12),
-                child: Column(
-                  children: [
-                    const WelcomeHeaderSection(),
-                    SizedBox(height: 40.h),
-                    const WelcomeBodySection(),
-                    SizedBox(height: 40.h),
-                    const WelcomeButtonsSection(),
-                  ],
-                ),
+              child: ListView(
+                padding: const EdgeInsets.all(12).r,
+                children: [
+                  const WelcomeHeaderSection(),
+                  SizedBox(height: 40.h),
+                  const WelcomeBodySection(),
+                  SizedBox(height: 40.h),
+                  const WelcomeButtonsSection(),
+                ],
               ),
             )
           ],

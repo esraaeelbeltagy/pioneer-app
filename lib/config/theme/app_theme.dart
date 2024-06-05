@@ -23,6 +23,29 @@ ThemeData appTheme() {
           ),
         ),
       ),
+      checkboxTheme: CheckboxThemeData(
+        fillColor: MaterialStateProperty.all(
+          AppColors.secondaryColor,
+        ),
+        checkColor: MaterialStateProperty.all(AppColors.white),
+        side: const BorderSide(color: AppColors.secondaryColor),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(5.r),
+          ),
+        ),
+      ),
+      inputDecorationTheme: const InputDecorationTheme(
+        prefixIconColor: AppColors.black1,
+        suffixIconColor: AppColors.black1,
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.secondaryColor),
+        ),
+        errorStyle: TextStyle(color: AppColors.error),
+        errorBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.error),
+        ),
+      ),
       textTheme: TextTheme(
         bodyMedium: TextStyle(
           color: AppColors.black1,
