@@ -10,6 +10,7 @@ class CustomUnderlineTextField extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final String? labelText, hintText;
   final Widget? prefixIcon, suffixIcon;
+  final String? Function(String?)? validator;
   const CustomUnderlineTextField({
     super.key,
     this.onTap,
@@ -23,11 +24,12 @@ class CustomUnderlineTextField extends StatelessWidget {
     this.hintText,
     this.prefixIcon,
     this.suffixIcon,
+    this.validator,
   });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       onTap: onTap,
       onChanged: onChanged,
       controller: controller,
@@ -35,6 +37,7 @@ class CustomUnderlineTextField extends StatelessWidget {
       keyboardType: keyboardType,
       inputFormatters: inputFormatters,
       readOnly: readOnly,
+      validator: validator,
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,

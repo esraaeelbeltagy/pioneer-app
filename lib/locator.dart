@@ -10,6 +10,9 @@ import 'package:pioneer_app/features/auth/domain/usecases/sign_in_with_google_us
 import 'package:pioneer_app/features/auth/domain/usecases/signup_existing_student_usecase.dart';
 import 'package:pioneer_app/features/auth/domain/usecases/signup_new_student_usecase.dart';
 import 'package:pioneer_app/features/auth/domain/usecases/signup_parent_usecase.dart';
+import 'package:pioneer_app/features/auth/presentation/login/bloc/login_bloc.dart';
+import 'package:pioneer_app/features/auth/presentation/signup_new_student/bloc/signup_new_student_bloc.dart';
+import 'package:pioneer_app/features/auth/presentation/signup_parent/bloc/signup_parent_bloc.dart';
 
 final GetIt locator = GetIt.instance;
 
@@ -34,7 +37,32 @@ void initLocator() {
 }
 
 //?init blocs
-void _initBlocs() {}
+void _initBlocs() {
+  //?auth
+
+  ///*Login
+  locator.registerFactory(
+    () => LoginBloc(
+      locator(),
+      locator(),
+      locator(),
+    ),
+  );
+
+  ///*Sign Up Parent
+  locator.registerFactory(
+    () => SignUpParentBloc(
+      locator(),
+    ),
+  );
+
+  ///*Sign Up New Student
+  locator.registerFactory(
+    () => SignUpNewStudentBloc(
+      locator(),
+    ),
+  );
+}
 
 //?init usecases
 void _initUsecases() {

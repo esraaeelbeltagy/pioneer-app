@@ -14,11 +14,20 @@ class AppStrings {
   //?Shared
   static const String login = "Login";
   static const String signup = "Sign Up";
+  static const String name = "Name";
+  static const String sonName = "Son's Name";
   static const String email = "Email";
+  static const String birthday = "Birthday";
   static const String password = "Password";
+  static const String confirmPassword = "Confirm Password";
+  static const String selectInTake = "Select in Take";
+  static const String selectUniversity = "Select University";
   static const String rememberMe = "Remember me";
   static const String forgotPassword = "Forgot password?";
   static const String or = "Or";
+
+  //hints
+  static const String dateFormat = "DD/MM/YYYY";
 
   //?Choose Role
   static const String parent = "Parent";
@@ -32,6 +41,11 @@ class AppStrings {
   static const String loginHeader1 = "Let's Sign you in.";
   static const String loginHeader2 = "Welcome back to\npioneer";
   static const String loginHeader3 = "You've been missed!";
+  static const String notHavingAccount = "Don't have an account?";
+
+  //?Sign up
+  static const String alreadyHaveAccount = "Already have an account?";
+  static const String createAnAccount = "Create an account";
 
   //?OnBoarding
   static const String skip = "Skip";
@@ -51,6 +65,9 @@ class AppStrings {
   static const String onBoarding9 =
       "Have you taken the lELTS, TOEFL, PTE or any English language proficiency test?";
 
+  //*Success
+  static const String signUpSuccess = "Sign Up Success";
+
   //!Errors
 
   static const String networkError = "No Internet Connection";
@@ -60,8 +77,14 @@ class AppStrings {
 
   static const String authCredentialsError = "Invalid Email or Password";
 
-  static const String authEmailError = "Invalid Email";
+  static const String emailError = "Invalid Email";
 
-  static const String authPasswordLengthError =
+  static const String nameLengthError = "Name must be at least 3 characters";
+
+  static const String passwordLengthError =
       "Password must be at least 8 characters";
+
+  static const String passwordsNotMatchError = "Passwords don't match";
+
+  static const String fieldRequiredError = "Field required";
 }

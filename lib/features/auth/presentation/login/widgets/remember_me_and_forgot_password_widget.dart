@@ -23,20 +23,23 @@ class RememberMeAndForgotPasswordWidget extends StatelessWidget {
               ValueListenableBuilder(
                 valueListenable: rememberMe,
                 builder: (context, value, _) {
-                  return Checkbox(
-                    value: value,
-                    onChanged: _toggleRememberMe,
+                  return SizedBox(
+                    width: 20.w,
+                    height: 20.h,
+                    child: FittedBox(
+                      child: Checkbox(
+                        value: value,
+                        onChanged: _toggleRememberMe,
+                      ),
+                    ),
                   );
                 },
-              ),
-              SizedBox(
-                width: 4.w,
               ),
               Text(
                 AppStrings.rememberMe,
                 style: context.textTheme.bodySmall?.copyWith(
                   fontWeight: FontWeight.normal,
-                  fontSize: 8.sp,
+                  fontSize: 6.sp,
                 ),
               ),
             ],
@@ -48,7 +51,7 @@ class RememberMeAndForgotPasswordWidget extends StatelessWidget {
               style: context.textTheme.bodySmall?.copyWith(
                 color: Colors.grey,
                 fontWeight: FontWeight.normal,
-                fontSize: 8.sp,
+                fontSize: 6.sp,
               ),
             ),
           ),

@@ -27,10 +27,10 @@ class AuthRepository implements BaseAuthRepository {
   }
 
   @override
-  Future<Either<Failure, Unit>> signInWithFacebook() async {
+  Future<Either<Failure, BaseUserModel>> signInWithFacebook() async {
     try {
-      await remoteDataSource.signInWithFacebook();
-      return const Right(unit);
+      final BaseUserModel user = await remoteDataSource.signInWithFacebook();
+      return Right(user);
     } on AuthException catch (e) {
       return Left(AuthFailure(message: e.message));
     } on NetworkException catch (e) {
@@ -41,10 +41,10 @@ class AuthRepository implements BaseAuthRepository {
   }
 
   @override
-  Future<Either<Failure, Unit>> signInWithGoogle() async {
+  Future<Either<Failure, BaseUserModel>> signInWithGoogle() async {
     try {
-      await remoteDataSource.signInWithGoogle();
-      return const Right(unit);
+      final BaseUserModel user = await remoteDataSource.signInWithGoogle();
+      return Right(user);
     } on AuthException catch (e) {
       return Left(AuthFailure(message: e.message));
     } on NetworkException catch (e) {

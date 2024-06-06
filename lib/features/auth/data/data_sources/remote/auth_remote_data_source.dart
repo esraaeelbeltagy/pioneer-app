@@ -14,8 +14,8 @@ abstract class BaseAuthRemoteDataSource {
       SignUpNewStudentParameters signUpNewStudentParameters);
   Future<void> signUpExistingStudent(
       SignUpExistingStudentParameters signUpExistingStudentParameters);
-  Future<void> signInWithGoogle();
-  Future<void> signInWithFacebook();
+  Future<BaseUserModel> signInWithGoogle();
+  Future<BaseUserModel> signInWithFacebook();
 }
 
 class AuthRemoteDataSource implements BaseAuthRemoteDataSource {
@@ -50,18 +50,38 @@ class AuthRemoteDataSource implements BaseAuthRemoteDataSource {
   }
 
   @override
-  Future<void> signInWithFacebook() async {
+  Future<BaseUserModel> signInWithFacebook() async {
     await _checkInternetConnection();
     await Future.delayed(
       const Duration(seconds: 3),
     );
+    return Future.value(
+      StudentModel(
+        id: 0,
+        dateOfBirth: DateTime.now(),
+        university: '',
+        name: '',
+        email: '',
+        phone: '',
+      ),
+    );
   }
 
   @override
-  Future<void> signInWithGoogle() async {
+  Future<BaseUserModel> signInWithGoogle() async {
     await _checkInternetConnection();
     await Future.delayed(
       const Duration(seconds: 3),
+    );
+    return Future.value(
+      StudentModel(
+        id: 0,
+        dateOfBirth: DateTime.now(),
+        university: '',
+        name: '',
+        email: '',
+        phone: '',
+      ),
     );
   }
 

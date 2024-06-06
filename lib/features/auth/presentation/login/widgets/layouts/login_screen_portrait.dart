@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:pioneer_app/core/widgets/headers/transparent_app_bar.dart';
 import 'package:pioneer_app/core/widgets/layout/styled_scaffold.dart';
+import 'package:pioneer_app/core/widgets/visuals/app_bar_logo.dart';
 import 'package:pioneer_app/features/auth/presentation/login/widgets/auth_divider_widget.dart';
-import 'package:pioneer_app/features/auth/presentation/login/widgets/login_logo.dart';
 import 'package:pioneer_app/features/auth/presentation/login/widgets/sections/auth_buttons_section.dart';
 import 'package:pioneer_app/features/auth/presentation/login/widgets/sections/login_fields_section.dart';
+import 'package:pioneer_app/features/auth/presentation/login/widgets/sections/login_footer_section.dart';
 import 'package:pioneer_app/features/auth/presentation/login/widgets/sections/login_header_section.dart';
 
 class LoginScreenPortrait extends StatelessWidget {
@@ -24,7 +25,7 @@ class LoginScreenPortrait extends StatelessWidget {
   Widget build(BuildContext context) {
     return StyledScaffold(
       appBar: TransparentAppBar(
-        title: const LoginLogo(),
+        title: const AppBarLogo(),
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -51,7 +52,11 @@ class LoginScreenPortrait extends StatelessWidget {
           ),
           const AuthButtonsSection(),
           SizedBox(
-            height: 10.h,
+            height: 20.h,
+          ),
+          LoginFooterSection(
+            emailController: emailController,
+            passwordController: passwordController,
           ),
         ],
       ),
