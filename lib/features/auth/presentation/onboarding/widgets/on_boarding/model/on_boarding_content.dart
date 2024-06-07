@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pioneer_app/core/utils/app_strings.dart';
 
-import '../../../../../../core/utils/images.dart';
+import '../../../../../../../core/utils/images.dart';
 import '../form_1_widget.dart';
 import '../form_2_widget.dart';
 import '../form_3_widget.dart';

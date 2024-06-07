@@ -9,6 +9,7 @@ class AppColors {
   static const Color black1 = Color(0xFF050505);
   static const Color black2 = Color(0xFF121212);
   static const Color dot = Color(0xFFD5E2F5);
+  static const Color grey = Color(0xFF666666);
 
   static  LinearGradient lightBlue = LinearGradient(colors: [
     const Color(0xFF05A9E2),

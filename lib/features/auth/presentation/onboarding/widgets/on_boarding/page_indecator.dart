@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/app_colors.dart';
 import 'model/on_boarding_content.dart';
 
 class PageIndicator extends StatelessWidget {

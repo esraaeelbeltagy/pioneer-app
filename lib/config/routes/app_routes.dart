@@ -7,7 +7,8 @@ class Routes {
   static const universities = '/universities';
   static const programmes = '/programmes';
   static const profile = '/profile';
-  static const settings = '/';
+  static const settings = '/settings';
+  static const addTask = '/add-task';
   //! for student
 
   static const signUpStudent = '/sign-up-student';

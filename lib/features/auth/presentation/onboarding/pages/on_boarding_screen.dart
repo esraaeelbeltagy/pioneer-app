@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:pioneer_app/features/auth/presentation/widgets/on_boarding/page_viewer_content.dart';
+import 'package:pioneer_app/features/auth/presentation/onboarding/widgets/on_boarding/page_viewer_content.dart';
 
 import '../widgets/on_boarding/on_boarding_custom_row.dart';
 import '../widgets/on_boarding/model/on_boarding_content.dart';
-import '../widgets/on_boarding/page_indecator.dart';
+
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
