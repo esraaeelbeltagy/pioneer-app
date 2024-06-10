@@ -24,7 +24,7 @@ class _Form4WidgetState extends State<Form4Widget> {
         width: 220.w,
         //height: 50.h,
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.seconeryColor),
+          border: Border.all(color: AppColors.secondaryColor),
           borderRadius: BorderRadius.circular(10.r),
         ),
         child: Center(

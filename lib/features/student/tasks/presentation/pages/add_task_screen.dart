@@ -37,7 +37,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             SizedBox(
               height: 35.h,
               child: CustomButton(
-                color: AppColors.seconeryColor,
+                color: AppColors.secondaryColor,
                 widget: Text(
                   "Submit",
                   style: TextStyle(

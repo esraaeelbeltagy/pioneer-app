@@ -1,6 +1,9 @@
 class Routes {
+  static const splash = '/splash';
+  static const welcome = '/welcome';
   static const onBoarding = '/on-boarding';
   static const chooseRole = '/choose-role';
+  static const chooseStudent = '/choose-student';
   static const chooseLanguage = '/choose-language';
   static const signIn = '/sign-in';
   static const home = '/home';
@@ -11,12 +14,10 @@ class Routes {
   static const addTask = '/add-task';
   //! for student
 
-  static const signUpStudent = '/sign-up-student';
-
+  static const signUpNewStudent = '/sign-up-new-student';
+  static const signUpExistingStudent = '/sign-up-existing-student';
 
   //! for Parent
 
   static const signUpParent = '/sign-up-parent';
- 
-
 }

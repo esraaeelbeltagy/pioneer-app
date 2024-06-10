@@ -40,7 +40,7 @@ class Form3Widget extends StatelessWidget {
        
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25.r),
-            border: Border.all(color: AppColors.seconeryColor)),
+            border: Border.all(color: AppColors.secondaryColor)),
         child: Center(
           child: Text(
             text,

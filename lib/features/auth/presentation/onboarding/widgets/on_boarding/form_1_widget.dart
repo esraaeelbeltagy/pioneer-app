@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/utils/app_colors.dart';
@@ -25,7 +23,7 @@ class Form1Widget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(25.r),
                   ),
                   backgroundColor: AppColors.white,
-                  side: const BorderSide(color: AppColors.seconeryColor),
+                  side: const BorderSide(color: AppColors.secondaryColor),
                 ),
                 child: Text(
                   "Yes",
@@ -51,7 +49,7 @@ class Form1Widget extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.r),
                   ),
-                  backgroundColor: AppColors.seconeryColor,
+                  backgroundColor: AppColors.secondaryColor,
                 ),
                 child:  Text(
                   "Not yet",

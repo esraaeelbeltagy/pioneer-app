@@ -15,12 +15,40 @@ ThemeData appTheme() {
           fontSize: 18.sp,
           fontWeight: FontWeight.bold,
         ),
-        backgroundColor: AppColors.appBarColor,
+        backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(15.r),
             bottomLeft: Radius.circular(15.r),
           ),
+        ),
+      ),
+      checkboxTheme: CheckboxThemeData(
+        fillColor: MaterialStateProperty.all(
+          AppColors.secondaryColor,
+        ),
+        checkColor: MaterialStateProperty.all(AppColors.white),
+        side: const BorderSide(color: AppColors.secondaryColor),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(5.r),
+          ),
+        ),
+      ),
+      inputDecorationTheme:  InputDecorationTheme(
+        prefixIconColor: AppColors.black1,
+        suffixIconColor: AppColors.black1,
+        hintStyle: TextStyle(fontSize: 12.sp ),
+        // suffixStyle: TextStyle(fontSize: 8.sp),
+        // prefixStyle: TextStyle(fontSize: 8.sp),
+        labelStyle: TextStyle(fontSize: 12.sp),
+        
+        enabledBorder: const UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.secondaryColor),
+        ),
+        errorStyle:  TextStyle(color: AppColors.error , fontSize: 10.sp),
+        errorBorder: const UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.error ),
         ),
       ),
       textTheme: TextTheme(
