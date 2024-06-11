@@ -1,3 +1,4 @@
+
 class Routes {
   static const splash = '/splash';
   static const welcome = '/welcome';
@@ -6,12 +7,13 @@ class Routes {
   static const chooseStudent = '/choose-student';
   static const chooseLanguage = '/choose-language';
   static const signIn = '/sign-in';
-  static const home = '/home';
+  static const home = '/';
   static const universities = '/universities';
   static const programmes = '/programmes';
   static const profile = '/profile';
   static const settings = '/settings';
   static const addTask = '/add-task';
+  
   //! for student
 
   static const signUpNewStudent = '/sign-up-new-student';
@@ -21,3 +23,4 @@ class Routes {
 
   static const signUpParent = '/sign-up-parent';
 }
+

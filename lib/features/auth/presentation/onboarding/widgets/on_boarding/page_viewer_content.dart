@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 import 'model/on_boarding_content.dart';
 
 // ignore: must_be_immutable
@@ -18,7 +17,7 @@ class PageViewerContent extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 60.h , right: 25.w , left: 25.w),
+          padding: EdgeInsets.only(top: 60.h, right: 25.w, left: 25.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -35,17 +34,17 @@ class PageViewerContent extends StatelessWidget {
               Flexible(
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: 15.h),
-                  child: Flexible(
-                    child: Text(
-                      contentList[index].text ?? "",
-                      style: Theme.of(context).textTheme.bodyMedium,
-                      textAlign: TextAlign.center,
-                    ),
+                  child: Text(
+                    contentList[index].text ?? "",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
-              contentList[index].widget ,
-              SizedBox(height: height*.15,)
+              contentList[index].widget,
+              SizedBox(
+                height: height * .15,
+              )
             ],
           ),
         ),

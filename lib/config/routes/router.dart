@@ -19,6 +19,7 @@ import 'package:pioneer_app/features/auth/presentation/welcome/pages/welcome_scr
 import 'package:pioneer_app/locator.dart';
 
 
+import '../../core/widgets/layout/bottom_nav_bar_widget.dart';
 import 'app_routes.dart';
 
 final GoRouter router = GoRouter(
@@ -91,6 +92,16 @@ final GoRouter router = GoRouter(
         return const OnBoardingScreen();
       },
     ),
+ 
+    GoRoute(
+      path: Routes.home,
+      name: Routes.home,
+      builder: (BuildContext context, GoRouterState state) {
+        return const BottomNavBar();
+      },
+    ),
+ 
+
     GoRoute(
       path: Routes.addTask,
       name: Routes.addTask,
@@ -110,6 +121,9 @@ final GoRouter router = GoRouter(
    
     
   ],
+
+
+
 );
 
 

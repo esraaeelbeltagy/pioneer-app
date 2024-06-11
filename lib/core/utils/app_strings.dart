@@ -87,4 +87,7 @@ class AppStrings {
   static const String passwordsNotMatchError = "Passwords don't match";
 
   static const String fieldRequiredError = "Field required";
+  static const String undefiendRoute = "undefiendRoute";
+
+
 }

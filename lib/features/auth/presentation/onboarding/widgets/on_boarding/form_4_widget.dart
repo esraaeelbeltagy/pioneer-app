@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,27 +18,39 @@ class _Form4WidgetState extends State<Form4Widget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(vertical: 10.h),
-      child: Container(
-        width: 220.w,
-        //height: 50.h,
-        decoration: BoxDecoration(
-          border: Border.all(color: AppColors.secondaryColor),
-          borderRadius: BorderRadius.circular(10.r),
-        ),
-        child: Center(
-          child: DropdownMenu<String>(
-           
-            width: 220.w,
-            trailingIcon: const Icon(Icons.keyboard_arrow_down_outlined),
+      padding: EdgeInsets.symmetric(vertical: 10.h),
+      child: Center(
+        child: Theme(
+          data: ThemeData(
             inputDecorationTheme: InputDecorationTheme(
-              
+
+              contentPadding: const EdgeInsets.symmetric(vertical: 0),
               iconColor: AppColors.black1,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.r),
-                borderSide: BorderSide.none,
+              border: UnderlineInputBorder(
+                borderRadius: BorderRadius.circular(20.r),
+                borderSide: const BorderSide(
+                 
+                  color: AppColors.secondaryColor,
+                ),
               ),
             ),
+          ),
+          child: DropdownMenu<String>(
+            width: 220.w,
+            trailingIcon: const Icon(Icons.keyboard_arrow_down_outlined),
+            selectedTrailingIcon: const Icon(Icons.keyboard_arrow_up_outlined),
+            // inputDecorationTheme: InputDecorationTheme(
+            //   contentPadding: const EdgeInsets.all(0),
+            //   iconColor: AppColors.black1,
+            //   border: OutlineInputBorder(
+            //     borderRadius: BorderRadius.circular(10.r),
+            //     borderSide: const BorderSide(
+            //       width: .2,
+            //       color: AppColors.secondaryColor,
+            //     ),
+            //   ),
+            // ),
+
             textStyle: TextStyle(
               color: AppColors.black1,
               fontSize: 13.sp,
