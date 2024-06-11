@@ -13,7 +13,13 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  List<Widget> screens = [];
+  List<Widget> screens = [
+    const SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
+  ];
 
   final BorderRadius _borderRadius = const BorderRadius.only(
     topLeft: Radius.circular(25),
@@ -51,6 +57,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar : AppBar(),
+      endDrawer: const Drawer(),
+      body : screens[_selectedItemPosition],
       backgroundColor: Colors.green,
       extendBody: true,
       bottomNavigationBar: SnakeNavigationBar.color(
@@ -64,16 +74,39 @@ class _BottomNavBarState extends State<BottomNavBar> {
         unselectedItemColor: unselectedColor,
         showUnselectedLabels: showUnselectedLabels,
         showSelectedLabels: showSelectedLabels,
-        
         currentIndex: _selectedItemPosition,
         onTap: (index) => setState(() => _selectedItemPosition = index),
-        items:  [
-          BottomNavigationBarItem(icon: Icon(Icons.home, size: 28.sp,), label: 'tickets'),
+        items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.book , size: 28.sp,), label: 'universities'),
-          BottomNavigationBarItem(icon: Icon(Icons.search, size: 28.sp,), label: 'search'),
-          BottomNavigationBarItem(icon: Icon(Icons.abc , size: 28.sp,), label: 'majors'),
-          BottomNavigationBarItem(icon: Icon(Icons.person, size: 28.sp,), label: 'person')
+              icon: Icon(
+                Icons.home,
+                size: 28.sp,
+              ),
+              label: 'tickets'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.book,
+                size: 28.sp,
+              ),
+              label: 'universities'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                size: 28.sp,
+              ),
+              label: 'search'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.abc,
+                size: 28.sp,
+              ),
+              label: 'majors'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                size: 28.sp,
+              ),
+              label: 'person')
         ],
         selectedLabelStyle: const TextStyle(fontSize: 28),
         unselectedLabelStyle: const TextStyle(fontSize: 28),
