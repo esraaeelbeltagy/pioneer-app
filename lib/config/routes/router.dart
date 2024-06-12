@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:pioneer_app/features/auth/presentation/onboarding/pages/on_boarding_screen.dart';
+import 'package:pioneer_app/features/auth/presentation/signup_existing_student/bloc/signup_existing_student_bloc.dart';
+import 'package:pioneer_app/features/auth/presentation/signup_existing_student/pages/signup_existing_student_screen.dart';
 import 'package:pioneer_app/features/student/profile/presentation/pages/settings_screen.dart';
 import 'package:pioneer_app/features/student/tasks/presentation/pages/add_task_screen.dart';
 
@@ -18,14 +20,11 @@ import 'package:pioneer_app/features/auth/presentation/splash/pages/splash_scree
 import 'package:pioneer_app/features/auth/presentation/welcome/pages/welcome_screen.dart';
 import 'package:pioneer_app/locator.dart';
 
-
 import '../../core/widgets/layout/bottom_nav_bar_widget.dart';
 import 'app_routes.dart';
 
 final GoRouter router = GoRouter(
-
   initialLocation: Routes.splash,
-
   routes: [
     GoRoute(
       path: Routes.splash,
@@ -86,13 +85,22 @@ final GoRouter router = GoRouter(
       },
     ),
     GoRoute(
+      path: Routes.signUpExistingStudent,
+      name: Routes.signUpExistingStudent,
+      builder: (BuildContext context, GoRouterState state) {
+        return BlocProvider.value(
+          value: locator<SignUpExistingStudentBloc>(),
+          child: const SignUpExistingStudentScreen(),
+        );
+      },
+    ),
+    GoRoute(
       path: Routes.onBoarding,
       name: Routes.onBoarding,
       builder: (BuildContext context, GoRouterState state) {
         return const OnBoardingScreen();
       },
     ),
- 
     GoRoute(
       path: Routes.home,
       name: Routes.home,
@@ -100,12 +108,9 @@ final GoRouter router = GoRouter(
         return const BottomNavBar();
       },
     ),
- 
-
     GoRoute(
       path: Routes.addTask,
       name: Routes.addTask,
-
       builder: (BuildContext context, GoRouterState state) {
         return const AddTaskScreen();
       },
@@ -113,17 +118,9 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: Routes.settings,
       name: Routes.settings,
-
       builder: (BuildContext context, GoRouterState state) {
         return const SettingsScreen();
       },
     ),
-   
-    
   ],
-
-
-
 );
-
-

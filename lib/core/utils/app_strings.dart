@@ -88,6 +88,4 @@ class AppStrings {
 
   static const String fieldRequiredError = "Field required";
   static const String undefiendRoute = "undefiendRoute";
-
-
 }

@@ -87,7 +87,7 @@ class _SignUpParentScreenState extends State<SignUpNewStudentScreen> {
                 ),
               ),
               SizedBox(
-                height: 40.h,
+                height: 20.h,
               ),
               SignUpNewStudentFieldsSection(
                 nameController: _nameController,
@@ -99,7 +99,7 @@ class _SignUpParentScreenState extends State<SignUpNewStudentScreen> {
                 confirmVisibility: _confirmVisibility,
               ),
               SizedBox(
-                height: 60.h,
+                height: 40.h,
               ),
               SignUpNewStudentFooterSection(
                 nameController: _nameController,

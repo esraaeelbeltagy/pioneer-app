@@ -11,6 +11,7 @@ import 'package:pioneer_app/features/auth/domain/usecases/signup_existing_studen
 import 'package:pioneer_app/features/auth/domain/usecases/signup_new_student_usecase.dart';
 import 'package:pioneer_app/features/auth/domain/usecases/signup_parent_usecase.dart';
 import 'package:pioneer_app/features/auth/presentation/login/bloc/login_bloc.dart';
+import 'package:pioneer_app/features/auth/presentation/signup_existing_student/bloc/signup_existing_student_bloc.dart';
 import 'package:pioneer_app/features/auth/presentation/signup_new_student/bloc/signup_new_student_bloc.dart';
 import 'package:pioneer_app/features/auth/presentation/signup_parent/bloc/signup_parent_bloc.dart';
 
@@ -59,6 +60,13 @@ void _initBlocs() {
   ///*Sign Up New Student
   locator.registerFactory(
     () => SignUpNewStudentBloc(
+      locator(),
+    ),
+  );
+
+  ///*Sign Up Existing Student
+  locator.registerFactory(
+    () => SignUpExistingStudentBloc(
       locator(),
     ),
   );
