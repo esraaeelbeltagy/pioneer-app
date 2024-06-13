@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:pioneer_app/features/auth/presentation/onboarding/pages/on_boarding_screen.dart';
 import 'package:pioneer_app/features/auth/presentation/signup_existing_student/bloc/signup_existing_student_bloc.dart';
 import 'package:pioneer_app/features/auth/presentation/signup_existing_student/pages/signup_existing_student_screen.dart';
-import 'package:pioneer_app/features/student/profile/presentation/pages/settings_screen.dart';
+import 'package:pioneer_app/features/student/profile/presentation/settings/pages/settings_screen.dart';
 import 'package:pioneer_app/features/student/tasks/presentation/pages/add_task_screen.dart';
 
 import 'package:pioneer_app/features/auth/presentation/choose_role/pages/choose_role_screen.dart';
@@ -24,7 +24,7 @@ import '../../core/widgets/layout/bottom_nav_bar_widget.dart';
 import 'app_routes.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: Routes.splash,
+  initialLocation: Routes.home,
   routes: [
     GoRoute(
       path: Routes.splash,

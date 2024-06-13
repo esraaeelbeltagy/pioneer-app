@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pioneer_app/core/extensions/size_extension.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import 'package:pioneer_app/core/extensions/size_extension.dart';
 import 'package:pioneer_app/core/extensions/theme_extension.dart';
 import 'package:pioneer_app/core/utils/app_colors.dart';
 
@@ -16,22 +17,32 @@ class StyledScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color : context.theme.scaffoldBackgroundColor,
+      color: context.theme.scaffoldBackgroundColor,
       child: Stack(
         children: [
-          CustomPaint(
-            size: Size(
-                context.width,
-                (context.width * 1.0433526011560694)
-                    .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-            painter: _UpperCornerCustomPainter(context: context),
+          Positioned(
+            top: -4.r,
+            left: -32.r,
+            child: CustomPaint(
+              size: Size(
+                346.w,
+                361.h,
+                // context.width,
+                // (context.width * 1.0433526011560694).toDouble(),
+              ), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+              painter: _UpperCornerCustomPainter(context: context),
+            ),
           ),
-          CustomPaint(
-            size: Size(
-                context.width,
-                (context.width * 2.5074626865671643)
-                    .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-            painter: _LowerCornerCustomPainter(),
+          Positioned(
+            bottom: 0.r,
+            right: 0.r,
+            child: CustomPaint(
+              size: Size(201.w, 504.h
+                  // context.width,
+                  // (context.width * 2.5074626865671643).toDouble(),
+                  ), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+              painter: _LowerCornerCustomPainter(),
+            ),
           ),
           Scaffold(
             backgroundColor: Colors.transparent,

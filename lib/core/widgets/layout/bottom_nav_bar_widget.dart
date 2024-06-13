@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
+import 'package:pioneer_app/features/student/profile/presentation/profile/pages/student_profile_screen.dart';
 
 import '../../utils/app_colors.dart';
 
@@ -18,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const SizedBox(),
     const SizedBox(),
     const SizedBox(),
-    const SizedBox(),
+    const StudentProfileScreen(),
   ];
 
   final BorderRadius _borderRadius = const BorderRadius.only(
@@ -32,7 +33,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   SnakeBarBehaviour snakeBarStyle = SnakeBarBehaviour.floating;
   EdgeInsets padding = const EdgeInsets.all(12);
 
-  int _selectedItemPosition = 2;
+  int _selectedItemPosition = 0;
   SnakeShape snakeShape = SnakeShape.circle;
 
   bool showSelectedLabels = false;
@@ -57,13 +58,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar : AppBar(),
+      // appBar: AppBar(),
       endDrawer: const Drawer(),
-      body : screens[_selectedItemPosition],
+      body: screens[_selectedItemPosition],
       backgroundColor: Colors.green,
       extendBody: true,
       bottomNavigationBar: SnakeNavigationBar.color(
+        elevation: 6,
         behaviour: snakeBarStyle,
         snakeShape: snakeShape,
         shape: bottomBarShape,
@@ -78,35 +79,40 @@ class _BottomNavBarState extends State<BottomNavBar> {
         onTap: (index) => setState(() => _selectedItemPosition = index),
         items: [
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                size: 28.sp,
-              ),
-              label: 'tickets'),
+            icon: Icon(
+              Icons.home_outlined,
+              size: 28.sp,
+            ),
+            label: 'home',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.book,
-                size: 28.sp,
-              ),
-              label: 'universities'),
+            icon: Icon(
+              Icons.book_outlined,
+              size: 28.sp,
+            ),
+            label: 'universities',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.search,
-                size: 28.sp,
-              ),
-              label: 'search'),
+            icon: Icon(
+              Icons.search,
+              size: 28.sp,
+            ),
+            label: 'search',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.abc,
-                size: 28.sp,
-              ),
-              label: 'majors'),
+            icon: Icon(
+              Icons.abc_outlined,
+              size: 28.sp,
+            ),
+            label: 'majors',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person,
-                size: 28.sp,
-              ),
-              label: 'person')
+            icon: Icon(
+              Icons.person_outlined,
+              size: 28.sp,
+            ),
+            label: 'profile',
+          )
         ],
         selectedLabelStyle: const TextStyle(fontSize: 28),
         unselectedLabelStyle: const TextStyle(fontSize: 28),
