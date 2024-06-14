@@ -13,8 +13,8 @@ class AppBarLogo extends StatelessWidget {
     return Hero(
       tag: HeroTags.logo,
       child: LogoWidget(
-        width: 50.w,
-        height: 50.h,
+        width: 64.w,
+        height: 64.h,
       ),
     );
   }

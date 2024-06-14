@@ -24,7 +24,7 @@ import '../../core/widgets/layout/bottom_nav_bar_widget.dart';
 import 'app_routes.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: Routes.home,
+  initialLocation: Routes.splash,
   routes: [
     GoRoute(
       path: Routes.splash,

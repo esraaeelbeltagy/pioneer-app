@@ -12,6 +12,7 @@ class CustomUnderlineTextField extends StatelessWidget {
   final String? labelText, hintText;
   final Widget? prefixIcon, suffixIcon;
   final String? Function(String?)? validator;
+  final TextStyle? labelStyle, hintStyle;
   const CustomUnderlineTextField({
     super.key,
     this.onTap,
@@ -26,6 +27,8 @@ class CustomUnderlineTextField extends StatelessWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.validator,
+    this.labelStyle,
+    this.hintStyle,
   });
 
   @override
@@ -44,7 +47,9 @@ class CustomUnderlineTextField extends StatelessWidget {
         suffixStyle: TextStyle(fontSize: 8.sp),
         prefixStyle: TextStyle(fontSize: 8.sp),
         labelText: labelText,
+        labelStyle: labelStyle,
         hintText: hintText,
+        hintStyle: hintStyle,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),

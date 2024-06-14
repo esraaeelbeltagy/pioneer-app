@@ -25,6 +25,10 @@ class AppStrings {
   static const String rememberMe = "Remember me";
   static const String forgotPassword = "Forgot password?";
   static const String or = "Or";
+  static const String university = "University";
+  static const String major = "Major";
+  static const String inTake = "InTake";
+  static const String cgpa = "CGPA";
 
   //hints
   static const String dateFormat = "DD/MM/YYYY";
@@ -64,6 +68,16 @@ class AppStrings {
       "Great, here are the education experts who you've been matched with, based on your answers here today. Experts that are online are listed first. See the results by clicking the button";
   static const String onBoarding9 =
       "Have you taken the lELTS, TOEFL, PTE or any English language proficiency test?";
+
+  //?Student Profile
+  static const String educationInformation = "Education Information";
+  static const String applicationStatus = "Application Status";
+  static const String accommodation = "Accommodation";
+  static const String bestSpots = "Best Spots";
+  static const String community = "Community";
+  static const String events = "Events";
+  static const String carsTable = "Cars table";
+  static const String urgentCase = "Urgent case";
 
   //*Success
   static const String signUpSuccess = "Sign Up Success";
