@@ -52,6 +52,11 @@ ThemeData appTheme() {
         ),
       ),
       textTheme: TextTheme(
+        bodyLarge: TextStyle(
+          color: AppColors.black1,
+          fontSize: 20.sp,
+          fontWeight: FontWeight.w700,
+        ),
         bodyMedium: TextStyle(
           color: AppColors.black1,
           fontSize: 15.sp,
@@ -67,6 +72,11 @@ ThemeData appTheme() {
           fontSize: 12.sp,
           fontWeight: FontWeight.normal,
         ),
+        displaySmall: TextStyle(
+          color: Colors.white,
+          fontSize: 13.sp,
+          fontWeight: FontWeight.w700
+        )
       ),
       iconTheme: const IconThemeData(
         color: AppColors.white,

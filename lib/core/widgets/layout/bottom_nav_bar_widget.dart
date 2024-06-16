@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:pioneer_app/features/student/profile/presentation/profile/pages/student_profile_screen.dart';
 
+import '../../../features/student/about/presentation/pages/about_screen.dart';
 import '../../utils/app_colors.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -15,7 +16,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> screens = [
-    const SizedBox(),
+    const AboutScreen(),
     const SizedBox(),
     const SizedBox(),
     const SizedBox(),
