@@ -39,4 +39,5 @@ class DoNotHaveAccountWidget extends StatelessWidget {
   void _goToChooseRole(BuildContext context) {
     context.pushReplacementNamed(Routes.chooseRole);
   }
+
 }
